@@ -7,4 +7,4 @@ README
 
 UML
 
-[![eng](https://img.shields.io/badge/lang-eng-blue.svg)](https://github.com/holodnii/Mython-Interpreter/blob/main/Mython-Interpreter_uml.svg)
+[![eng](https://img.shields.io/badge/lang-eng-blue.svg)](https://github.com/holodnii/Mython-Interpreter/blob/main/UML.svg)
