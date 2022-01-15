@@ -1,7 +1,7 @@
 Mython-Interpreter
 =============
 
-Python analogue programming language interpreter which consists of 3 modules: lexical analyzer, parser, runtime module.
+Python analogue programming language interpreter which consists of 3 modules: lexical analyzer, parser, runtime module. Program is capable of transforming python code in to c++ and then machine code.
 
 **Usage:**
 -------
