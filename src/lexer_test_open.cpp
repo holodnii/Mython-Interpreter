@@ -46,7 +46,6 @@ void TestNumbers() {
 
     ASSERT_EQUAL(lexer.CurrentToken(), Token(token_type::Number{42}));
     ASSERT_EQUAL(lexer.NextToken(), Token(token_type::Number{15}));
-    // Отрицательные числа формируются на этапе синтаксического анализа
     ASSERT_EQUAL(lexer.NextToken(), Token(token_type::Char{'-'}));
     ASSERT_EQUAL(lexer.NextToken(), Token(token_type::Number{53}));
 }
@@ -163,8 +162,8 @@ x = 1
     ASSERT_EQUAL(lexer.NextToken(), Token(token_type::Char{'='}));
     ASSERT_EQUAL(lexer.NextToken(), Token(token_type::Number{2}));
     ASSERT_EQUAL(lexer.NextToken(), Token(token_type::Newline{}));
-    // Пустая строка, состоящая только из пробельных символов не меняет текущий отступ,
-    // поэтому следующая лексема — это Id, а не Dedent
+    // ГЏГіГ±ГІГ Гї Г±ГІГ°Г®ГЄГ , Г±Г®Г±ГІГ®ГїГ№Г Гї ГІГ®Г«ГјГЄГ® ГЁГ§ ГЇГ°Г®ГЎГҐГ«ГјГ­Г»Гµ Г±ГЁГ¬ГўГ®Г«Г®Гў Г­ГҐ Г¬ГҐГ­ГїГҐГІ ГІГҐГЄГіГ№ГЁГ© Г®ГІГ±ГІГіГЇ,
+    // ГЇГ®ГЅГІГ®Г¬Гі Г±Г«ГҐГ¤ГіГѕГ№Г Гї Г«ГҐГЄГ±ГҐГ¬Г  вЂ” ГЅГІГ® Id, Г  Г­ГҐ Dedent
     ASSERT_EQUAL(lexer.NextToken(), Token(token_type::Id{"z"s}));
     ASSERT_EQUAL(lexer.NextToken(), Token(token_type::Char{'='}));
     ASSERT_EQUAL(lexer.NextToken(), Token(token_type::Number{3}));
